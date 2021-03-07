@@ -1,0 +1,23 @@
+<div class="dash-component">
+  <nav class="navbar navbar-light justify-content-between">
+    <div class="container-fluid" *ngFor="let user of userData ">
+      <a class="navbar-brand">FLEX</a>
+      <form class="form-inline">
+        <p>Hello! <span class="pl-1">{{user.firstName}}</span></p>
+      </form>
+    </div>
+  </nav>
+
+  <div class="main">
+    <div class="container">
+      <div *ngFor="let user of userData ">
+      <h1 class="title pb-3">Welcome <span>{{user.firstName}}</span></h1>
+
+
+      <div class="grp-btn pt-3">
+        <a type="button" class="btn btn1 mr-3" (click)="authService.SignOut()">Log Out</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
